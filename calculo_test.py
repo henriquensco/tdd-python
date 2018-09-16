@@ -25,5 +25,8 @@ class TestCalculo(unittest.TestCase):
 		self.assertEqual(calculo.multiplicacao(6, 3), 18)
 		self.assertEqual(calculo.multiplicacao(6, 6), 36)
 
+		with self.assertRaises(ValueError):
+			calculo.multiplicacao(10, 5)
+
 if __name__ == '__main__':
 	unittest.main()
